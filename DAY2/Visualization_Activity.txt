@@ -1,0 +1,43 @@
+Task
+--------
+step 1: import seaborn and matplotlib modules
+step 2: load flights data set from seaborn module
+step 3: create line plot years and passengers
+step 4: display line plot with hue based on 'month'
+
+
+
+Task
+------
+step 1: import seaborn and matplotlib modules
+step 2: load tips data set use seaborn module
+step 3: display scatter plot of total_bill Vs tip
+step 4: display plot with hue based on time
+step 5: display different representation for smokers and non smokers
+        use col = ''
+
+Task
+--------
+step 1: import seaborn and matplotlib modules
+step 2: load tips data set use seaborn module
+step 3: use catplot - display box plot of gender Vs total bill
+
+Task
+-------
+step 1: import seaborn and matplotlib modules
+step 2: load titanic data set use seaborn module
+step 3: create barplot of gender vs survived with hue based on class
+        display the number of observation in each category use catplot
+|
+step 4: modify the above parameters with point plot (use Kind='point')
+
+
+Task
+----
+step 1: import numpy,pandas,matplotlib,seaborn modules
+step 2: generate random multivariate data (use numpy.random.multivariate_normal)
+step 3: create dataframe (use: pandas) with columns X,Y
+step 4: display matplot histogram graph ; enabled density(density=True)
+|
+step 5: modify step 4 -> use KDE plots
+---------------------------------------------------------------------------
