@@ -1,0 +1,8 @@
+python /home/student/pETL.py
+
+# edit - your login name 
+# cd {Enter}
+# pwd
+# 
+# (or) whoami - see your login name - update your login name 
+#
