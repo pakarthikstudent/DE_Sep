@@ -1,0 +1,30 @@
+winx 11 - Linux 
+mkdir airflow_project
+cd airflow_project
+virtualenv airflow_venv 
+source airflow_venv/bin/activate
+|
+(airflow_venv)admin@hostname airflow_project]$ 
+
+(airflow_venv)admin@hostname airflow_project]$ export AIRFLOW_VERSION=2.10.1
+(airflow_venv)admin@hostname airflow_project]$ export PYTHON_VERSION="$(python --version|cut -d" " -f 2|cut -d"." -f 1,2)"
+(airflow_venv)admin@hostname airflow_project]$ export CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
+(airflow_venv)admin@hostname airflow_project]$ pip install "apache-airflow == ${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
+(airflow_venv)admin@hostname airflow_project]$ airflow version
+(airflow_venv)admin@hostname airflow_project]$ airflow db init
+(airflow_venv)admin@hostname airflow_project]$ ls ~
+airflow
+(airflow_venv)admin@hostname airflow_project]$ ls ~/airflow 
+
+(airflow_venv)admin@hostname airflow_project]$ mkdir -p ~/airflow/dags
+
+(airflow_venv)admin@hostname airflow_project]$ ls ~/airflow
+
+## Setup Airflow User 
+(airflow_venv)admin@hostname airflow_project]$ airflow users create --username admin --firstname student --lastname user --role Admin --email test@example.com --password admin
+(airflow_venv) student@paka:~/airflow_project$ airflow webserver --port 8080
+|
+open another terminal
+|
+(airflow_venv) student@paka:~/airflow_project$ airflow scheduler
+---------------------------------------------------------------------------------
