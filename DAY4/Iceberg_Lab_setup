@@ -6,6 +6,6 @@ Install Dependencies
 ----------------------
 pip install pyspark
 
-Run - iceberg_demo.py 
+Run - iceberg_demo.py -> https://github.com/pakarthikstudent/DE_Sep/blob/main/DAY4/iceberg_demo.py
 -----------------------
 spark-submit --jars jars/iceberg-spark-runtime-3.4_2.12-1.5.2.jar iceberg_demo.py
