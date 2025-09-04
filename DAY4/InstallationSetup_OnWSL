@@ -1,0 +1,28 @@
+# update
+sudo apt update && sudo apt upgrade -y
+
+# install java
+sudo apt install openjdk-17-jdk -y
+
+# test java version
+java -version
+
+# install python3 and pip3 utility
+sudo apt install python3 python3-pip -y
+
+# install virtual env 
+sudo apt install python3-venv -y
+
+# Create virtual env
+python3 -m venv pyspark-env
+
+# Activate Virtual env
+source pyspark-env/bin/activate
+
+# Inside Virtual env - install pyspark
+pip install pyspark
+|
+# Test Spark version
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.appName("test").getOrCreate()
+print(spark.version)
